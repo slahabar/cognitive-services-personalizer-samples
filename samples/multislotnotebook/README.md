@@ -1,31 +1,31 @@
-# Project Name
+# Personalizer simulation in an Azure notebook
 
-TODO: Write a project description
+This tutorial simulates a Personalizer loop _system_ which suggests which type of coffee a customer should order. The users and their preferences are stored in a [user dataset](users.json). Information about the coffee is also available and stored in a [coffee dataset](coffee.json).
 
-## Installation
+Run the system for 25,000 requests and then create graph showing how fast and accurately the system learned. 
 
-TODO: Describe the installation process
+Run an offline counterfactual evaluation to select an optimized learning policy, and apply that policy.
 
-## Usage
+Run the system again, but for 5,000 requests and again create the graph showing the accuracy of the system.
 
-TODO: Write usage instructions
+## Prerequisites
 
-## Contributing
+* [Azure notebooks](https://notebooks.azure.com/) account
+* [Personalizer resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesPersonalizer)
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## How to use this sample
 
-## History
+All the instructions are in the notebook. Here is an abbreviated explanation.
 
-TODO: Write history
+1. Create a new Azure notebook project.
+1. Upload the files in this directory to the Azure notebook project. 
+1. Open the MultislotPersonalizer.ipynb file and change the following values:
 
-## Credits
+    * The value for `<your-resource-name>` in the `personalization_base_url` to the value for your Personalizer resource
+    * The value for `<your-resource-key>` variable to one of the Personalizer resource keys. 
 
-TODO: Write credits
+1. Run each cell from top to bottom. Wait until each cell is complete before running the next cell. 
 
-## License
+## References
 
-TODO: Write license
+* [Tutorial on docs.microsoft.com](https://docs.microsoft.com/azure/cognitive-services/personalizer/tutorial-use-azure-notebook-generate-loop-data)
